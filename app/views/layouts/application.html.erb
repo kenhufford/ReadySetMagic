@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BenchBnB</title>
+    <title>GameSetMagic</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,10 +13,12 @@
         window.currentUser = <%= render(
       "api/users/user.json.jbuilder",
       user: current_user
-    ).html_safe %>
+      ).html_safe %>
       </script>
     <% end %>
     
+
+    <script src="https://kit.fontawesome.com/e2de4b3feb.js" crossorigin="anonymous"></script>
   </head>
 
   <body>

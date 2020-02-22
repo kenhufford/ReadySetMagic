@@ -6,7 +6,10 @@ export default class SessionForm extends Component {
         super(props);
         this.state = {
             username: "",
-            password: ""
+            password: "",
+            email: "",
+            firstName: "",
+            lastName: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this)
     }
@@ -22,10 +25,10 @@ export default class SessionForm extends Component {
                 [field]: e.target.value
             })
         }
-    }
+   }
 
     render(){
-        const {username, password} = this.state
+        const {username, password, email, firstName, lastName} = this.state
         return (
             <div>
               <ul>
@@ -40,9 +43,27 @@ export default class SessionForm extends Component {
               {this.props.formType === "Signup" ? "Login" : "Signup"}
             </Link>
             <form onSubmit={this.handleSubmit}>
+              {this.props.formType === "Signup" ? 
+              <div>
+                  <label>
+                    Email
+                    <input type="text" value={email} onChange={this.handleInput("email")} />
+                  </label> 
+                  <label>
+                    First Name
+                    <input type="text" value={firstName} onChange={this.handleInput("firstName")} />
+                  </label> 
+                  <label>
+                    Last Name
+                    <input type="text" value={lastName} onChange={this.handleInput("lastName")} />
+                  </label> 
+              </div>
+                :  
+              <div></div>
+              }
               <label>
                 Username
-                <input type="text" value={username} onChange={this.handleInput("username")}/>
+                <input type="text" value={username} onChange={this.handleInput("username")} />
               </label>
               <label>
                 Password
