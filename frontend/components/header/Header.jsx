@@ -25,7 +25,7 @@ class Header extends React.Component {
             </div>
         );
         return(
-            <div>
+            <div className="header-main">
                 <div className="header-left">
                     GameSetMagic
                 </div>

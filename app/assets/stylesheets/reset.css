@@ -16,3 +16,7 @@ span, article, footer, time, small {
 ul {
   list-style: none;
 }
+
+html, body, main{
+  height: 100%;
+}
