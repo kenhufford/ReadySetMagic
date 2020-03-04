@@ -20,27 +20,24 @@ class Header extends React.Component {
             </div>
         ) : (
             <div className="header-right">
-                <Link to="/signup">Sign Up</Link>
-                <Link to="/login">Log In</Link>
+                <Link 
+                    to="/signup"
+                    className="link-button" >Sign Up</Link>
+                <Link 
+                    to="/login" 
+                    className="link-button" >Log In</Link>
             </div>
         );
         return(
             <div className="header-main">
                 <div className="header-left">
-                    GameSetMagic
+                    <Link 
+                        className="link-text" 
+                        to="/">GameSetMagic</Link>
                 </div>
                 {HeaderBar}
             </div>
         )
     }
-}
-
-switch (key) {
-    case value:
-        
-        break;
-
-    default:
-        break;
 }
 export default Header

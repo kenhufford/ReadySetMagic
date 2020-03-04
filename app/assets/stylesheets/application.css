@@ -20,3 +20,25 @@
     height: 100%;
     margin: 0 auto;
 }
+
+
+.link-text{
+    color: rgb(0, 0, 126);
+    font-size: 1.25em;
+    text-decoration: none;
+}
+
+.link-button{
+    border-radius: 20px;
+    border: 1px rgb(0, 0, 126) solid;
+    color: rgb(0, 0, 126);
+    font-size: 1.25em;
+    padding: .25em 1em;
+    text-decoration: none;
+    transition: color 0.5s ease 0s;
+}
+
+.link-button:hover{
+    color:white;
+    background-color: rgb(0, 0, 126);
+}
